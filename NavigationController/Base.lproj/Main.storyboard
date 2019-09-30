@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e7K-fL-oAM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,151 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctr-sH-fvU">
+                                <rect key="frame" x="104.5" y="433" width="205" height="30"/>
+                                <state key="normal" title="Go To Second View Controller"/>
+                                <connections>
+                                    <action selector="goToSecondViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5X-Cu-Rgz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ctr-sH-fvU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="70J-Xq-O4N"/>
+                            <constraint firstItem="ctr-sH-fvU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rnr-Bw-Iie"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="R9h-65-bHV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Utr-Rt-FTE">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="oxb-Am-Ytb" customClass="SecondViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tja-ul-SA9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix4-ML-La8">
+                                <rect key="frame" x="112.5" y="433" width="189" height="30"/>
+                                <state key="normal" title="Go To Third View Controller"/>
+                                <connections>
+                                    <action selector="goToThirdViewController:" destination="oxb-Am-Ytb" eventType="touchUpInside" id="thg-W0-v1Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ix4-ML-La8" firstAttribute="centerX" secondItem="Tja-ul-SA9" secondAttribute="centerX" id="REV-CY-qFU"/>
+                            <constraint firstItem="Ix4-ML-La8" firstAttribute="centerY" secondItem="Tja-ul-SA9" secondAttribute="centerY" id="vOQ-iU-SmZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dd7-iU-7HZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLC-aB-c8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747.826086956522" y="109.82142857142857"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="fna-Ha-zcR">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="Op3-bt-1Yp" customClass="ThirdViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1d-aq-5Jz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STC-bA-lSo">
+                                <rect key="frame" x="107.5" y="433" width="199" height="30"/>
+                                <state key="normal" title="Go To Fourth View Controller"/>
+                                <connections>
+                                    <action selector="goToFourthViewController:" destination="Op3-bt-1Yp" eventType="touchUpInside" id="v1h-iA-3Yv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="STC-bA-lSo" firstAttribute="centerY" secondItem="P1d-aq-5Jz" secondAttribute="centerY" id="SfT-A1-2H3"/>
+                            <constraint firstItem="STC-bA-lSo" firstAttribute="centerX" secondItem="P1d-aq-5Jz" secondAttribute="centerX" id="Skg-cX-w5m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gBg-HM-1Ak"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yth-ZC-4eu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421.739130434783" y="108.48214285714285"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="Wyf-Nr-lXE">
+            <objects>
+                <viewController storyboardIdentifier="FourthViewController" id="Kba-yW-XZZ" customClass="FourthViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Pn-Go-H03">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjB-qN-smg">
+                                <rect key="frame" x="114.5" y="433" width="185" height="30"/>
+                                <state key="normal" title="Go To Root View Controller"/>
+                                <connections>
+                                    <action selector="goToRootViewController:" destination="Kba-yW-XZZ" eventType="touchUpInside" id="vZ6-QG-o1U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y68-W3-98x">
+                                <rect key="frame" x="139" y="483" width="136" height="30"/>
+                                <state key="normal" title="Pop View Controller"/>
+                                <connections>
+                                    <action selector="popViewControlller:" destination="Kba-yW-XZZ" eventType="touchUpInside" id="E4G-EL-SKC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nl1-IB-Ri1">
+                                <rect key="frame" x="104.5" y="533" width="205" height="30"/>
+                                <state key="normal" title="Go To Second View Controller"/>
+                                <connections>
+                                    <action selector="goToSecondViewController:" destination="Kba-yW-XZZ" eventType="touchUpInside" id="LNA-CA-eFO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y68-W3-98x" firstAttribute="centerX" secondItem="0Pn-Go-H03" secondAttribute="centerX" id="0Nz-AU-ksH"/>
+                            <constraint firstItem="Nl1-IB-Ri1" firstAttribute="top" secondItem="Y68-W3-98x" secondAttribute="bottom" constant="20" id="3fh-RX-5Ip"/>
+                            <constraint firstItem="Y68-W3-98x" firstAttribute="top" secondItem="DjB-qN-smg" secondAttribute="bottom" constant="20" id="6gQ-Rg-Zlr"/>
+                            <constraint firstItem="Nl1-IB-Ri1" firstAttribute="centerX" secondItem="0Pn-Go-H03" secondAttribute="centerX" id="7e3-c3-Oiu"/>
+                            <constraint firstItem="DjB-qN-smg" firstAttribute="centerY" secondItem="0Pn-Go-H03" secondAttribute="centerY" id="AdY-zP-h6m"/>
+                            <constraint firstItem="DjB-qN-smg" firstAttribute="centerX" secondItem="0Pn-Go-H03" secondAttribute="centerX" id="NvS-a2-WgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7o5-Bc-x0k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbd-cZ-mai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3075.36231884058" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="50R-nm-oxk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e7K-fL-oAM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Mz-fK-sQK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OYD-BL-uZX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeV-Gq-gOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="108"/>
         </scene>
     </scenes>
 </document>
